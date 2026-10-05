@@ -1,24 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
+import Landing from "@/components/landing/Landing";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "Marcenaria Lukso | Móveis planejados em MDF no Rio de Janeiro" },
+      { name: "description", content: "Móveis planejados em MDF em Campo Grande, RJ. Simule cozinha, quarto ou sala e envie seu orçamento pelo WhatsApp." },
+      { property: "og:title", content: "Marcenaria Lukso — Móveis planejados RJ" },
+      { property: "og:description", content: "Simule seu ambiente planejado e fale com a Lukso pelo WhatsApp." },
+      { property: "og:type", content: "website" },
+      { property: "og:locale", content: "pt_BR" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
+  component: Landing,
 });
-
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
