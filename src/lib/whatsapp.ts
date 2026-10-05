@@ -4,7 +4,7 @@ import { calculateEstimate, money, type Configuration } from './calculateEstimat
 export function quoteMessage(config: Configuration, name: string, phone: string) {
   const service = services.find(s => s.id === config.serviceId)!;
   const estimate = calculateEstimate(config);
-  return `Olá! Gostaria de solicitar um orçamento de móveis sob medida.\n\nAmbiente: ${service.name}\nMedida: ${config.size.toLocaleString('pt-BR')} m\nAcabamento: ${finishes.find(f => f.id === config.finish)!.description}\nComplementos: ${service.extras.filter(e => config.extras.includes(e.id)).map(e => e.name).join(', ') || 'Nenhum'}\n\nFaixa estimada no site: ${money(estimate.min)} a ${money(estimate.max)}\nValores demonstrativos, sujeitos à avaliação do projeto.\n\nNome: ${name.trim()}\nTelefone: ${phone.trim()}\n\nPoderiam confirmar o orçamento final e a disponibilidade para atendimento?`;
+  return `Olá, Lukso! Fiz uma simulação no site e gostaria de um orçamento de móveis planejados.\n\nAmbiente: ${service.name}\nMedida: ${config.size.toLocaleString('pt-BR')} m\nAcabamento: ${finishes.find(f => f.id === config.finish)!.description}\nComplementos: ${service.extras.filter(e => config.extras.includes(e.id)).map(e => e.name).join(', ') || 'Nenhum'}\n\nFaixa estimada no site: ${money(estimate.min)} a ${money(estimate.max)}\nEstimativa inicial, sujeita à avaliação do projeto.\n\nNome: ${name.trim()}\nTelefone: ${phone.trim()}\n\nPoderiam confirmar o orçamento final e a disponibilidade para atendimento?`;
 }
 export function whatsappUrl(message: string) {
   const phone = business.whatsapp.replace(/\D/g, '');
