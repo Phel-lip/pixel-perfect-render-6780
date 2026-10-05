@@ -1,0 +1,3 @@
+import { Brand } from './Header';
+import { whatsappUrl } from '@/lib/whatsapp';
+export default function FinalCTA() { return <><section className="final-cta"><div className="shell final-inner"><div><p className="eyebrow">A SUA CASA COMEÇA COM UMA IDEIA</p><h2>Vamos dar forma<br />ao seu espaço?</h2></div><div><a href="#orcamento" className="button light">Calcular meu projeto</a><a href={whatsappUrl('Olá! Gostaria de conversar sobre móveis planejados.')} target="_blank" rel="noopener noreferrer" className="footer-contact">Conversar no WhatsApp</a></div></div></section><footer className="shell footer"><Brand /><p>Ambientes pensados para viver.</p><small>Marca demonstrativa · Imagens de referência<br />WhatsApp sem destinatário configurado</small></footer></>; }

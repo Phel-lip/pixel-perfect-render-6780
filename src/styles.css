@@ -1,6 +1,7 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
+@import "./landing.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -141,4 +142,14 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
   }
+}
+
+:root{
+  --background: oklch(0.975 0.006 85);
+  --foreground: oklch(0.22 0.01 70);
+  --primary: oklch(0.2 0.008 70);
+  --primary-foreground: oklch(0.98 0 0);
+  --ring: oklch(0.68 0.11 80);
+  --lukso-black: oklch(0.17 0.006 70);
+  --lukso-gold: oklch(0.74 0.12 82);
 }
