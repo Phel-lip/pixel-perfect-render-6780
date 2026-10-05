@@ -17,3 +17,5 @@
 
 .brand{display:flex;align-items:center;gap:12px;font-size:30px;letter-spacing:-1px}.brand-logo{width:48px;height:48px;border-radius:4px;flex-shrink:0}.brand-text{display:block;line-height:.9}.brand-text small{margin-top:7px}.footer .brand{font-size:28px}
 .final-cta{background:var(--lukso-black)}.final-cta h2 em{color:var(--lukso-gold)}
+.hero-visual,.results-photo{overflow:hidden}.hero-visual>img,.results-photo>img{width:112%;max-width:none;object-position:left center}
+@media(max-width:760px){.hero-visual>img{object-position:left 55%}.results-photo>img{object-position:left center}}

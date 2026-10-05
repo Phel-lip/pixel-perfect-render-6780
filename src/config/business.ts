@@ -1,3 +1,6 @@
+import kitchenAsset from '@/assets/lukso-kitchen.png.asset.json';
+import wardrobeAsset from '@/assets/lukso-wardrobe.png.asset.json';
+
 export const business = {
   name: 'Lukso',
   fullName: 'Marcenaria Lukso',
@@ -7,9 +10,8 @@ export const business = {
   // WhatsApp público, obtido em linktr.ee/MarcenariaLukso.
   whatsapp: '5521980576026',
   logo: '/lukso-logo.jpg',
-  // Imagens de referência: substituir por fotos reais de obras da Lukso.
   images: {
-    kitchen: '/cozinha.jpg',
-    wardrobe: '/closet.jpg',
+    kitchen: kitchenAsset.url,
+    wardrobe: wardrobeAsset.url,
   },
 };

@@ -10,3 +10,4 @@
 <!-- LOVABLE:END -->
 
 - Landing page content/brand lives in src/config (business.ts, services.ts) and src/landing.css; swap prospect data there to personalize without touching components.
+- Uploaded site photography uses Lovable Assets pointer files so real project media stays CDN-hosted and repository-light.
